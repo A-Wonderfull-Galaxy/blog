@@ -1,0 +1,43 @@
+{{!-- login or signup --}}
+<div class='text-center'>
+    <button class="btn" id="login-btn">Login</button> or <button class="btn" id="signup-btn">Sign Up</button>
+</div>
+
+<div class="container">
+    <div class="row">
+        +
+        {{!-- login form --}}
+        <form id='login-form' class="form-group login-form container ">
+            <h1 class="text-center">Login</h1>
+            <div>
+                <label for="user-login">username:</label>
+                <input type="text" id="user-login" placeholder="username" class="form-control" />
+            </div>
+            <div>
+                <label for="password-login">password:</label>
+                <input type="password" id="password-login" placeholder="password" class="form-control" />
+            </div>
+            <div class="text-center mt-3">
+                <button type="submit" class="btn">login</button>
+            </div>
+        </form>
+
+        {{!-- signup form --}}
+        <form id="signup-form" class="form-group signup-form container">
+            <h1 class="text-center">Sign Up</h1>
+            <div>
+                <label for="username-signup">username:</label>
+                <input type="text" id="username-signup" placeholder="username" class="form-control" />
+            </div>
+            <div>
+                <label for="password-signup">password:</label>
+                <input type="password" id="password-signup" placeholder="password" class="form-control" />
+            </div>
+            <div class="text-center mt-3">
+                <button type="submit" id='signup-btn' class="btn">signup</button>
+            </div>
+        </form>
+    </div>
+</div>
+{{!-- import login js file --}}
+<script src="/javascript/login.js"></script>

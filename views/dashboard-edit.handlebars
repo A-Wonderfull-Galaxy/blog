@@ -1,0 +1,14 @@
+<form class='text-center d-flex justify-content-center update-form'>
+    <div id="post-form">
+        <div for="post-title">Update Title:</div>
+        <input type="text" class="post-title form-control-lg" id="post-title" name="post-title" value="{{post.title}}" />
+        <input class="form-control" name='post-text' id="post-text" value="{{post.post_text}}"></textarea>
+        <button type="submit" id='update-btn' class="btn">Update Post #{{post.id}}</button>
+    </div>
+</form>
+
+<div class='text-center'>
+<a href='/dashboard'>Return home</a>
+</div>
+
+<script src="/javascript/update.js"></script>

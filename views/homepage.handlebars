@@ -1,0 +1,25 @@
+{{#if posts}}
+{{#each posts}}
+<div class="my-2">
+    <div class="card" style="m-4">
+        <div class="card-body">
+
+            <h5 class="card-title">{{title}}</h5>
+
+            <h6 class="card-subtitle ">@{{user.username}} on: {{created_at}}</h6>
+
+            <p class="card-text">{{post_text}}</p>
+
+            <a href="/blogpost/{{id}}" class="card-link">View</a>
+
+        </div>
+    </div>
+
+</div>
+
+{{/each}}
+<div>
+    {{else}}
+    <h1>no post</h1>
+    {{/if}}
+</div>

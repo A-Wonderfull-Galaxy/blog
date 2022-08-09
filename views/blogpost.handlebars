@@ -1,0 +1,40 @@
+{{!-- blog post --}}
+<div class="m-3">
+<h1 class="text-center">{{post.title}}</h1>
+<h6 class="card-subtitle text-center">
+    @ {{post.user.username}} on: {{post.created_at}}
+</h6>
+<p class="card-text">{{post.post_text}}</p>
+
+
+{{!-- comments --}}
+<div class="alert mt-4">
+    <h3 class="alert-heading">Comments</h4>
+    <hr>
+{{#if post.comments}}
+{{#each post.comments}}
+    <p>{{comment_text}}</p>
+    <small>
+    <p>@ {{user.username}} on: {{created_at}}</p>
+    <hr>
+    </small>
+{{/each}}
+{{else}}
+{{!-- if no comment show this --}}
+<p>No comments</p>
+
+{{/if}}
+{{#if loggedIn}}
+  <form class="form-group comment-form">
+    <textarea class="form-control" name='comment-body' id="exampleFormControlTextarea1" id="comment" rows="3" placeholder="Leave a comment"></textarea>
+    <button type="submit" class="btn">Post</button>
+  </form>
+  {{else}}
+  <form class="form-group">
+    <textarea class="form-control" name='comment-body' id="exampleFormControlTextarea1" rows="3" placeholder="You must sign in to leave a comment" disabled></textarea>
+    <button type="submit" class="btn">Post</button>
+  </form>
+{{/if}}
+</div>
+
+<script src="/javascript/comment.js"></script>
